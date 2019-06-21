@@ -1,0 +1,36 @@
+{
+  "Version": "2012-10-17",
+  "Id": "http referer policy example",
+  "Statement": [
+    {
+      "Sid": "Allow get requests referred by www.swiatchmury.pl and swiatchmury.pl.",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::swiatchmury-examples/*",
+      "Condition": {
+        "StringLike": {
+          "aws:Referer": [
+            "https://www.swiatchmury.pl/*",
+            "https://swiatchmury.pl/*"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "Allow get requests referred by www.swiatchmury.pl and swiatchmury.pl.",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::swiatchmury-examples/*",
+      "Condition": {
+        "StringNotLike": {
+          "aws:Referer": [
+            "https://www.swiatchmury.pl/*",
+            "https://swiatchmury.pl/*"
+          ]
+        }
+      }
+    }
+  ]
+}

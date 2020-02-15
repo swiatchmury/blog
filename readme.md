@@ -1,4 +1,4 @@
-**[swiatchmury.pl](https://swiatchmury)** to blog poświęcony chmurze publicznej. Tu dowiesz się:
+**[swiatchmury.pl](https://swiatchmury.pl)** to blog poświęcony chmurze publicznej. Tu dowiesz się:
 
 * jak zacząć korzystać z chmury?
 * jakich usług użyć?
